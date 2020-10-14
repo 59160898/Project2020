@@ -24,17 +24,17 @@ export class DashboardComponent implements OnInit {
         datasets: [{
           label: "ขวดแก้ว",
           backgroundColor: "#5B9BD5",
-          data: [10, 20, 30, 80]
+          data: [25, 25, 25, 25]
         },
         {
           label: "ขวดพลาสติก",
           backgroundColor: '#ED7D31',
-          data: [70, 40, 10, 100]
+          data: [50, 50, 50, 50]
         },
         {
           label: "กระป๋องโลหะ",
           backgroundColor: '#A5A5A5',
-          data: [80, 50, 90, 27]
+          data: [80, 80, 80, 80]
         }
         ]
       },
