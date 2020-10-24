@@ -44,13 +44,29 @@ export class DashboardComponent implements OnInit {
             ticks: {
               min: 0,
               max: 100,
+              fontSize: 18,
+              fontColor: 'black',
               callback: function (value) {
                 return value + "%"
               }
             }
+          }],
+          xAxes: [{
+            ticks: {
+              fontSize: 16,
+              fontColor: 'black'
+            }
           }]
         },
-        responsive: false
+        legend: {
+          labels: {
+              // This more specific font property overrides the global property
+              fontColor: 'black',
+              fontSize: 18
+
+          }
+      },
+      responsive: false
       }
     });
   }

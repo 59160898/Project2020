@@ -49,9 +49,24 @@ export class ReportComponent implements OnInit {
           yAxes: [{
             ticks: {
               min: 0,
+              fontSize: 18,
+              fontColor: 'black'
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontSize: 18,
+              fontColor: 'black'
             }
           }]
         },
+        legend: {
+          labels: {
+              // This more specific font property overrides the global property
+              fontColor: 'black',
+              fontSize: 18
+          }
+      },
         responsive: false
       }
     });
