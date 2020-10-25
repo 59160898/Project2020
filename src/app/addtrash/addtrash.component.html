@@ -1,0 +1,134 @@
+<div class="card card-light">
+    <div class="card-header">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <p class="h5 d-inline-block font-weight-bold">เพิ่มข้อมูลขยะ</p>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    
+        function yesnoCheck() {
+            if (document.getElementById('TotalTrashCheck').checked = true) {
+                document.getElementById('ifTotalTrashCheck').style.display = 'block';
+            } 
+            else {
+                document.getElementById('ifTotalTrashCheck').style.display = 'none';
+            }
+        }
+    
+    </script>
+    <div class="card-body">
+        <form role="form">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>ประเภทของขยะ</label>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" onclick="yesnoCheck()" name="radio1" id="TotalTrashCheck">
+                            <label class="form-check-label">ขยะรวมทุกประเภท</label>
+                            <div id="ifTotalTrashCheck" style="display:none;margin-top:3%;">จำนวน 
+                                <input type="text" class="form-control" placeholder="">
+                                กิโลกรัม
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"  name="radio1" id="TypeTrashCheck">
+                            <label class="form-check-label">ขยะประเภทต่าง ๆ</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- select -->
+                    <div class="form-group">
+                        <label>เส้นทางการเก็บขน</label>
+                        <select class="form-control">
+                            <option>-- กรุณาเลือกเส้นทางการเก็บขน --</option>
+                            <option>มหาวิทยาลัยบูรพา</option>
+                            <option>หาดวอนนภา</option>
+                            <option>เขาสามมุข</option>
+                            <option>ถนนเลี่ยงเมือง</option>
+                            <option>ถนนลงหาดบางแสน</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>ทะเบียนรถเก็บขยะ</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>พนักงานขับรถ</label>
+                        <select class="form-control">
+                            <option>-- กรุณาเลือกพนักงานขับรถ --</option>
+                            <option>บุญมี เกริกศรี</option>
+                            <option>องอาจ หาญกล้า</option>
+                            <option>ภักดี ชมจิต</option>
+                            <option>ขุนเขา เลื่องลือ</option>
+                            <option>ลำธาร ใสจริง</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>พนักงานเก็บขนคนที่ 1</label>
+                        <select class="form-control select2" style="width: 100%;">
+                            <option>-- กรุณาเลือกพนักงานเก็บขน --</option>
+                            <option>สุชาติ สานฝัน</option>
+                            <option>อำนวย อวยชัย</option>
+                            <option>ผดุง ยุติธรรม</option>
+                            <option>จักรี ศรีสยาม</option>
+                            <option>ผาภูมิ แกร่งกล้า</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>พนักงานเก็บขนคนที่ 2</label>
+                        <select class="form-control select2" style="width: 100%;">
+                            <option>-- กรุณาเลือกพนักงานเก็บขน --</option>
+                            <option>สุชาติ สานฝัน</option>
+                            <option>อำนวย อวยชัย</option>
+                            <option>ผดุง ยุติธรรม</option>
+                            <option>จักรี ศรีสยาม</option>
+                            <option>ผาภูมิ แกร่งกล้า</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>พนักงานเก็บขนคนที่ 3</label>
+                        <select class="form-control select2" style="width: 100%;">
+                            <option>-- กรุณาเลือกพนักงานเก็บขน --</option>
+                            <option>สุชาติ สานฝัน</option>
+                            <option>อำนวย อวยชัย</option>
+                            <option>ผดุง ยุติธรรม</option>
+                            <option>จักรี ศรีสยาม</option>
+                            <option>ผาภูมิ แกร่งกล้า</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </form>
+        <div class="card-footer">
+            <ul class="nav justify-content-center">
+            <button type="submit" class="btn btn-primary">บันทึก</button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-default">ยกเลิก</button>
+            </ul>
+        </div>
+    </div>
+    <!-- /.card-body -->
+</div>

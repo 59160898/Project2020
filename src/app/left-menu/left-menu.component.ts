@@ -17,6 +17,10 @@ export class LeftMenuComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  trashmanage(){
+    this.router.navigate(['trashmanage']);
+  }
+
   device(){
     this.router.navigate(['device']);
   }
@@ -24,4 +28,29 @@ export class LeftMenuComponent implements OnInit {
   report(){
     this.router.navigate(['report']);
   }
+
+  setting(){
+    this.router.navigate(['setting']);
+  }
+
+  addtypetrash(){
+    this.router.navigate(['addtypetrash']);
+  }
+
+  addroutecollectiontrash(){
+    this.router.navigate(['addroutecollectiontrash']);
+  }
+
+  adddriver(){
+    this.router.navigate(['adddriver']);
+  }
+
+  addcollectortrash(){
+    this.router.navigate(['addcollectortrash']);
+  }
+
+  addtruck(){
+    this.router.navigate(['addtruck']);
+  }
+
 }

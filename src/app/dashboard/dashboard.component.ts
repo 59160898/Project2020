@@ -53,6 +53,46 @@ export class DashboardComponent implements OnInit {
         responsive: false
       }
     });
+
+    this.canvas = document.getElementById('pieChart');
+    this.ctx = this.canvas.getContext('2d');
+    const pieChart = new Chart(this.ctx, {
+      type: 'pie',
+      data: {
+        labels: ["มหาวิทยาลัยบูรพา", "ชายหาดบางแสน", "แหลมแท่น บางแสน", "หาดวอนนภา"],
+        datasets: [{
+          backgroundColor: [
+            '#5B9BD5',
+            '#ED7D31',
+            '#A5A5A5',
+            '#3CB371'
+        ],
+          data: [10, 20, 30, 80]
+        }
+        ]
+      }
+      
+    });
+
+    this.canvas = document.getElementById('donutChart');
+    this.ctx = this.canvas.getContext('2d');
+    const donutChart = new Chart(this.ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ["ขยะทั่วไป", "ขยะอินทรีย์", "ขยะรีไซเคิล", "ขยะอันตราย"],
+        datasets: [{
+          backgroundColor: [
+            '#5B9BD5',
+            '#3CB371',
+            '#F5C340',
+            '#CC0000'
+        ],
+          data: [10, 20, 30, 80]
+        }
+        ]
+      }
+      
+    });
   }
 
 }
