@@ -21,7 +21,7 @@
         <li class="nav-item">
           <a (click)="device()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
             <i class="nav-icon fas fa-plus-square"></i>
-            <p class="h5">อุปกรณ์</p>
+            <p class="h5">อุปกรณ์<span class="right badge badge-danger">3</span></p>
           </a>
         </li>
         <li class="nav-item">
@@ -29,6 +29,27 @@
             <i class="nav-icon fas fa-file"></i>
             <p class="h5">รายงาน</p>
           </a>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+            <i class="nav-icon fas fa-user"></i>
+            <p class="h5">จัดการผู้ใช้</p>
+            <i class="fas fa-angle-left right"></i>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a (click)="manageUsers()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <i class="far fa-circle nav-icon"></i>
+                <p class="h5">จัดการผู้ใช้ 1</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="manageUsers()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <i class="far fa-circle nav-icon"></i>
+                <p class="h5">จัดการผู้ใช้ 2</p>
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>

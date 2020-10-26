@@ -24,4 +24,9 @@ export class LeftMenuComponent implements OnInit {
   report(){
     this.router.navigate(['report']);
   }
+
+  manageUsers(){
+    this.router.navigate(['manageUsers']);
+
+  }
 }

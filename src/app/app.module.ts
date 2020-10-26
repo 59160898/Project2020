@@ -10,10 +10,12 @@ import { DeviceComponent } from './device/device.component';
 import { ReportComponent } from './report/report.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { ManageUsersComponent } from './manage-users/manage-users.component';
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'device', component: DeviceComponent },
-  { path: 'report', component: ReportComponent }
+  { path: 'report', component: ReportComponent },
+  { path: 'manageUsers', component: ManageUsersComponent}
 
 ]
 
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     LeftMenuComponent,
     DashboardComponent,
     ReportComponent,
-    DeviceComponent
+    DeviceComponent,
+    ManageUsersComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

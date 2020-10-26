@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./device.component.scss']
 })
 export class DeviceComponent implements OnInit {
+  
+  getIndex(element) {
+    return [...element.parentNode.children].findIndex(c => c == element) + 1;
+  }
+  
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+
   }
 
 }
