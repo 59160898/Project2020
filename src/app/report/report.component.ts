@@ -25,7 +25,7 @@ export class ReportComponent implements OnInit {
         datasets: [{
           label: "ขวดแก้ว",
           backgroundColor: "#5B9BD5",
-          data: [10, 20, 30, 80]
+          data: [10, 20, 30, 30]
         },
         {
           label: "ขวดพลาสติก",
@@ -35,7 +35,12 @@ export class ReportComponent implements OnInit {
         {
           label: "กระป๋องโลหะ",
           backgroundColor: '#A5A5A5',
-          data: [80, 50, 90,27]
+          data: [80, 50, 90, 27]
+        },
+        {
+          label: "รวมทั้งหมด",
+          backgroundColor: '#87431d',
+          data: [160, 110, 130, 157]
         }
         ]
       },
@@ -44,10 +49,24 @@ export class ReportComponent implements OnInit {
           yAxes: [{
             ticks: {
               min: 0,
-              max: 100,
+              fontSize: 18,
+              fontColor: 'black'
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontSize: 18,
+              fontColor: 'black'
             }
           }]
         },
+        legend: {
+          labels: {
+              // This more specific font property overrides the global property
+              fontColor: 'black',
+              fontSize: 18
+          }
+      },
         responsive: false
       }
     });
