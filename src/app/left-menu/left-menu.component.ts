@@ -53,4 +53,10 @@ export class LeftMenuComponent implements OnInit {
     this.router.navigate(['addtruck']);
   }
 
+
+  manageUsers(){
+    this.router.navigate(['manageUsers']);
+
+  }
+
 }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -19,10 +20,7 @@ import { DetailtrashdataComponent } from './detailtrashdata/detailtrashdata.comp
 
 import { RouterModule, Routes } from '@angular/router';
 
-
-
-
-
+import { ManageUsersComponent } from './manage-users/manage-users.component';
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'trashmanage', component: TrashmanageComponent},
@@ -35,7 +33,10 @@ const appRoutes: Routes = [
   { path: 'adddriver', component: AdddriverComponent},
   { path: 'addcollectortrash', component: AddcollectortrashComponent},
   { path: 'addtruck', component: AddtruckComponent},
-  { path: 'detailtrashdata', component: DetailtrashdataComponent}
+  { path: 'detailtrashdata', component: DetailtrashdataComponent},
+
+  { path: 'manageUsers', component: ManageUsersComponent}
+
 ]
 
 @NgModule({
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
     DashboardComponent,
     ReportComponent,
     DeviceComponent,
+
     TrashmanageComponent,
     SettingComponent,
     AddtrashComponent,
@@ -53,12 +55,14 @@ const appRoutes: Routes = [
     AdddriverComponent,
     AddcollectortrashComponent,
     AddtruckComponent,
-    DetailtrashdataComponent
+    DetailtrashdataComponent,
+    ManageUsersComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
