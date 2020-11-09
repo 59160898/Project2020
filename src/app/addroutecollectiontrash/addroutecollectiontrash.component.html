@@ -2,131 +2,135 @@
     <div class="card-header">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <p class="h5 d-inline-block font-weight-bold">เพิ่มข้อมูลเส้นทางการเก็บขน</p>
+                <p class="h5 d-inline-block font-weight-bold">เพิ่มเส้นทางการเก็บขน</p>
             </li>
         </ul>
     </div>
     <div class="card-body">
-        <form role="form">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label>เส้นทางการเก็บขน</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label>จุดเริ่มต้นของเส้นทาง</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label>จุดสิ้นสุดของเส้นทาง</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
+        <div class="chart">
+            <ul class="nav justify-content-end">
+                <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-plus fa-fw"></i>
+                    เพิ่มเส้นทางการเก็บขน
+                </button>
+            </ul>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ลำดับ</th>
+                        <th scope="col">เส้นทางการเก็บขน</th>
+                        <th scope="col">จุดเริ่มต้นของเส้นทาง</th>
+                        <th scope="col">จุดสิ้นสุดของเส้นทาง</th>
+                        <th></th>
+                    </tr>
+                </thead>
 
-        </form>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>หาดวอนนภา</td>
+                        <td>ต้นหาดวอนนภา</td>
+                        <td>ท้ายหาดวอนนภา</td>
+                        <td>
+                            <ul class="nav justify-content-end">
+                            <button type="button" class="btn btn-sm btn-warning">
+                                <i class="fa fa-edit fa-fw"></i>
+                                แก้ไข
+                            </button>&nbsp;
+                            <button type="button" class="btn btn-sm btn-danger">
+                                <i class="nav-icon fas fa-trash fa-fw"></i>
+                                ลบ
+                            </button>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>เขาสามมุข</td>
+                        <td>ต้นเขาสามมุข</td>
+                        <td>ท้ายเขาสามมุข</td>
+                        <td>
+                            <ul class="nav justify-content-end">
+                            <button type="button" class="btn btn-sm btn-warning">
+                                <i class="fa fa-edit fa-fw"></i>
+                                แก้ไข
+                            </button>&nbsp;
+                            <button type="button" class="btn btn-sm btn-danger">
+                                <i class="nav-icon fas fa-trash fa-fw"></i>
+                                ลบ
+                            </button>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>ถนนเลี่ยงเมือง</td>
+                        <td>ต้นถนนเลี่ยงเมือง</td>
+                        <td>ท้ายถนนเลี่ยงเมือง</td>
+                        <td>
+                            <ul class="nav justify-content-end">
+                            <button type="button" class="btn btn-sm btn-warning">
+                                <i class="fa fa-edit fa-fw"></i>
+                                แก้ไข
+                            </button>&nbsp;
+                            <button type="button" class="btn btn-sm btn-danger">
+                                <i class="nav-icon fas fa-trash fa-fw"></i>
+                                ลบ
+                            </button>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ถนนลงหาดบางแสน</td>
+                        <td>ต้นถนนลงหาดบางแสน</td>
+                        <td>ท้ายถนนลงหาดบางแสน</td>
+                        <td>
+                            <ul class="nav justify-content-end">
+                            <button type="button" class="btn btn-sm btn-warning">
+                                <i class="fa fa-edit fa-fw"></i>
+                                แก้ไข
+                            </button>&nbsp;
+                            <button type="button" class="btn btn-sm btn-danger">
+                                <i class="nav-icon fas fa-trash fa-fw"></i>
+                                ลบ
+                            </button>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <ul class="nav justify-content-center">
-            <button type="submit" class="btn btn-primary">บันทึก</button>
-        </ul>
+        </div>
+
     </div>
     <!-- /.card-body -->
 </div>
 
-<div class="card card-light">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มเส้นทางการเก็บขน</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <label>เส้นทางการเก็บขน</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </form>
 
-    <div class="card-body">
-        <div class="chart">
-            <p class="h5 d-inline-block font-weight-bold">รายการข้อมูลเส้นทางการเก็บขน</p>
-<br><br>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ลำดับ</th>
-                                <th scope="col">เส้นทางการเก็บขน</th>
-                                <th scope="col">จุดเริ่มต้นของเส้นทาง</th>
-                                <th scope="col">จุดสิ้นสุดของเส้นทาง</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                                
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>หาดวอนนภา</td>
-                                <td>ต้นหาดวอนนภา</td>
-                                <td>ท้ายหาดวอนนภา</td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-warning">
-                                        <i class="fa fa-edit fa-fw"></i>
-                                        แก้ไข
-                                    </button>&nbsp;
-                                    <button type="button" class="btn btn-sm btn-danger">
-                                        <i class="nav-icon fas fa-trash fa-fw"></i>
-                                        ลบ
-                                    </button>
-                                </td>  
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>เขาสามมุข</td>
-                                <td>ต้นเขาสามมุข</td>
-                                <td>ท้ายเขาสามมุข</td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-warning">
-                                        <i class="fa fa-edit fa-fw"></i>
-                                        แก้ไข
-                                    </button>&nbsp;
-                                    <button type="button" class="btn btn-sm btn-danger">
-                                        <i class="nav-icon fas fa-trash fa-fw"></i>
-                                        ลบ
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>ถนนเลี่ยงเมือง</td>
-                                <td>ต้นถนนเลี่ยงเมือง</td>
-                                <td>ท้ายถนนเลี่ยงเมือง</td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-warning">
-                                        <i class="fa fa-edit fa-fw"></i>
-                                        แก้ไข
-                                    </button>&nbsp;
-                                    <button type="button" class="btn btn-sm btn-danger">
-                                        <i class="nav-icon fas fa-trash fa-fw"></i>
-                                        ลบ
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>ถนนลงหาดบางแสน</td>
-                                <td>ต้นถนนลงหาดบางแสน</td>
-                                <td>ท้ายถนนลงหาดบางแสน</td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-warning">
-                                        <i class="fa fa-edit fa-fw"></i>
-                                        แก้ไข
-                                    </button>&nbsp;
-                                    <button type="button" class="btn btn-sm btn-danger">
-                                        <i class="nav-icon fas fa-trash fa-fw"></i>
-                                        ลบ
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-           
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">บันทึก</button>
+            </div>
+        </div>
     </div>
-    <!-- /.card-body -->
 </div>

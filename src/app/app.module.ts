@@ -17,10 +17,12 @@ import { AdddriverComponent } from './adddriver/adddriver.component';
 import { AddcollectortrashComponent } from './addcollectortrash/addcollectortrash.component';
 import { AddtruckComponent } from './addtruck/addtruck.component';
 import { DetailtrashdataComponent } from './detailtrashdata/detailtrashdata.component';
+import { TrashreportComponent } from './trashreport/trashreport.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
 import { ManageUsersComponent } from './manage-users/manage-users.component';
+
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'trashmanage', component: TrashmanageComponent},
@@ -34,9 +36,8 @@ const appRoutes: Routes = [
   { path: 'addcollectortrash', component: AddcollectortrashComponent},
   { path: 'addtruck', component: AddtruckComponent},
   { path: 'detailtrashdata', component: DetailtrashdataComponent},
-
-  { path: 'manageUsers', component: ManageUsersComponent}
-
+  { path: 'manageUsers', component: ManageUsersComponent},
+  { path: 'trashreport', component: TrashreportComponent}
 ]
 
 @NgModule({
@@ -56,7 +57,8 @@ const appRoutes: Routes = [
     AddcollectortrashComponent,
     AddtruckComponent,
     DetailtrashdataComponent,
-    ManageUsersComponent
+    ManageUsersComponent,
+    TrashreportComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
