@@ -12,8 +12,12 @@
                     </button>
                 </div>
                 <div class="card-body">
-                    <div class="">
-                        <p class="h5">มหาวิทยาลัยบูรพา</p>
+                    <div>
+                        <p class="h5 d-inline-block mb-1 myDIV">มหาวิทยาลัยบูรพา</p>
+                        <button type="button" class="btn btn-danger btn-sm float-right hide">
+                            <i class="nav-icon fas fa-trash fa-fw"></i>
+                            ลบ
+                        </button>
                         <table class="table table-striped table-bordered table-sm" style="font-size:18px">
                             <thead>
                                 <th style="width: 25%">ประเภทถัง</th>
@@ -48,7 +52,11 @@
                         </table>
                     </div>
                     <div>
-                        <p class="h5">ชายหาดบางแสน</p>
+                        <p class="h5 d-inline-block mb-1">ชายหาดบางแสน</p>
+                        <button type="button" class="btn btn-danger btn-sm float-right">
+                            <i class="nav-icon fas fa-trash fa-fw"></i>
+                            ลบ
+                        </button>
                         <table class="table table-striped table-bordered table-sm" style="font-size:18px">
                             <thead>
                                 <th style="width: 25%">ประเภทถัง</th>
@@ -83,8 +91,8 @@
                         </table>
                     </div>
                     <div>
-                        <p class="h5 d-inline-block mb-3">แหลมแท่น บางแสน</p>
-                        <button type="button" class="btn btn-danger float-right">
+                        <p class="h5 d-inline-block mb-1">แหลมแท่น บางแสน</p>
+                        <button type="button" class="btn btn-danger btn-sm float-right">
                             <i class="nav-icon fas fa-trash fa-fw"></i>
                             ลบ
                         </button>
@@ -184,7 +192,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <label for="inputCode">กรุณาเปิดเครื่อง และกรอกรหัสลงทะเบียน</label>
+                <label for="inputCode">กรุณาเปิดเครื่อง และกรอกรหัสลงทะเบียน</label>&nbsp;<label class="text-danger">*</label>
                 <input class="form-control" type="text" placeholder="รหัสลงทะเบียน">
             </div>
             <div class="modal-footer">
