@@ -21,8 +21,11 @@ import { DetailtrashdataComponent } from './detailtrashdata/detailtrashdata.comp
 import { RouterModule, Routes } from '@angular/router';
 
 import { ManageUsersComponent } from './manage-users/manage-users.component';
+import { LoginComponent } from './components/login/login.component';
+
 const appRoutes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '',  redirectTo: '/login', pathMatch: 'full'},
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'trashmanage', component: TrashmanageComponent},
   { path: 'device', component: DeviceComponent },
   { path: 'report', component: ReportComponent },
@@ -34,8 +37,10 @@ const appRoutes: Routes = [
   { path: 'addcollectortrash', component: AddcollectortrashComponent},
   { path: 'addtruck', component: AddtruckComponent},
   { path: 'detailtrashdata', component: DetailtrashdataComponent},
+  { path: 'manageUsers', component: ManageUsersComponent},
 
-  { path: 'manageUsers', component: ManageUsersComponent}
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '/login'}
 
 ]
 
@@ -56,7 +61,8 @@ const appRoutes: Routes = [
     AddcollectortrashComponent,
     AddtruckComponent,
     DetailtrashdataComponent,
-    ManageUsersComponent
+    ManageUsersComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

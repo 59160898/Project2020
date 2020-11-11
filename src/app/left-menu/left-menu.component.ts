@@ -14,7 +14,7 @@ export class LeftMenuComponent implements OnInit {
   }
 
   dashboard(){
-    this.router.navigate(['']);
+    this.router.navigate(['dashboard']);
   }
 
   trashmanage(){
