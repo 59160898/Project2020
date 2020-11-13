@@ -1,0 +1,24 @@
+<div class="login-form">
+    <form class="form-signin" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+        <h2 class="text-center">เข้าสู่ระบบ</h2>
+        <div class="form-group">
+            <label for="username">ชื่อผู้ใช้</label>
+            <input type="text" id="inputLogin" class="form-control" name="login" placeholder="ชื่อผู้ใช้" ngModel
+                required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="password">เข้าสู่ระบบ</label>
+            <input type="password" id="inputPassword" class="form-control" name="password" placeholder="รหัสผ่าน"
+                autocomplete="on" ngModel required>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">เข้าสู่ระบบ</button>
+        </div>
+        <div class="alert alert-danger text-center" role="alert" *ngIf="isFormValid">
+            กรุณากรอกข้อมูล
+        </div>
+        <div class="alert alert-danger text-center" role="alert" *ngIf="areCredentialsInvalid">
+            ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง
+        </div>
+    </form>
+</div>

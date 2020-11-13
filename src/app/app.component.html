@@ -1,10 +1,6 @@
 <div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-
-    <!-- Right navbar links -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" *ngIf="authenticationService.isAuthenticated">
     <ul class="navbar-nav ml-auto">
-      <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" data-toggle="dropdown">
           <i class="far fa-bell fa-lg"></i>
@@ -36,35 +32,26 @@
           <i class="fas fa-sign-out-alt fa-lg"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">ออกจากระบบ</a>
+          <a (click)="logout()" class="dropdown-item">ออกจากระบบ</a>
         </div>
       </li>
     </ul>
+
+    <app-left-menu></app-left-menu>
+
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2020</strong>
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0.0
+      </div>
+    </footer>
+
   </nav>
-  <!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  <app-left-menu></app-left-menu>
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <div style="padding: 20px">
       <router-outlet></router-outlet>
     </div>
   </div>
-  <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2020</strong>
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
-    </div>
-  </footer>
 </div>
