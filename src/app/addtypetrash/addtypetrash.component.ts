@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-addtypetrash',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddtypetrashComponent implements OnInit {
 
-  constructor() { }
+  name: string
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) { }
+
+  ngOnInit(){
+  }
+  save() {
+    var params = {
+      name: this.name
+    }
+    this.http.post('http://localhost:3000/addTypestrash', params).subscribe((res: any) => {
+      console.log(res.data)
+    })
   }
 
 }

@@ -1,195 +1,232 @@
-<div class="card">
-    <h4 class="card-header font-weight-bold">จัดการผู้ใช้</h4>
-    <div class="card-body">
-        <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-user-plus fa-lg fa-fw" aria-hidden="true"></i>
-            เพิ่มผู้ใช้
-        </button>
-        <form class="form-inline mb-3">
-            <div class="form-group">
-                <label>ค้นหา: </label>
-                <input type="search" class="form-control mx-sm-3" aria-label="Search">
-            </div>
-        </form>
-        <div class="text-center">
-            <table class="table table-striped">
+<div class="container-fluid">
+    <div class="card">
+        <h4 class="card-header font-weight-bold">จัดการผู้ใช้</h4>
+        <div class="card-body">
+            <form class="form-inline d-inline-block mb-3">
+                <div class="form-group">
+                    <label>ค้นหา: </label>
+                    <input type="search" class="form-control mx-sm-3" aria-label="Search">
+                </div>
+            </form>
+            <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal"
+                data-target="#exampleModal">
+                <i class="fa fa-user-plus fa-lg fa-fw" aria-hidden="true"></i>
+                เพิ่มผู้ใช้
+            </button>
+            <table class="table table-striped text-center table-responsive-md">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" style="width: 5%">#</th>
-                        <th scope="col">ชื่อผู้ใช้</th>
                         <th scope="col">ชื่อ</th>
                         <th scope="col">นามสกุล</th>
                         <th scope="col">หน้าที่</th>
-                        <th scope="col" style="width: 7%">แก้ไข</th>
-                        <th scope="col" style="width: 7%">ลบ</th>
+                        <th scope="col" style="width: 30%"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">6</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">7</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">8</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">9</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                     <tr>
                         <th scope="row">10</th>
-                        <td>แอดมิน</td>
-                        <td>ชื่อ</td>
+                        <td>ชื่อจริง</td>
                         <td>นามสกุล</td>
                         <td>ผู้ใช้</td>
                         <td>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
-                        </td>
+                            <ul class="list-inline m-0">
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button type="button" class="btn btn-warning"><i class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                </li><li class="list-inline-item">
+                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash fa-fw"></i>ลบ</button>
+                                </li>
+                            </ul>                        </td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <label class="mr-2 d-inline-block">รายการที่ 1 ถึง 10 จากทั้งหมด 30 รายการ</label>
-        <div class="mr-2 d-inline-block" style="width: 4%">
-            <select class="custom-select">
-                <option selected>10</option>
-                <option value="1">20</option>
-                <option value="2">30</option>
-            </select>
-        </div>
-        <label>รายการต่อหน้า</label>
-        <ul class="pagination m-0 float-right">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">ก่อนหน้า</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <label class="mr-2 d-inline-block">รายการที่ 1 ถึง 10 จากทั้งหมด 30 รายการ</label>
+            <div class="mr-2 d-inline-block" style="width: 6%">
+                <select class="custom-select">
+                    <option selected>10</option>
+                    <option value="1">20</option>
+                    <option value="2">30</option>
+                </select>
+            </div>
+            <label>รายการต่อหน้า</label>
+            <ul class="pagination m-0 float-right">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">ก่อนหน้า</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
 
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">ต่อไป</span>
-                </a>
-            </li>
-        </ul>
-
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">ต่อไป</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-
 </div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -202,57 +239,59 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form class="container was-validated" action="/newaccount" method=post
+                oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่อผู้ใช้</label>
+                        <label for="inputUsername" class="col-sm-2 col-form-label">ชื่อผู้ใช้</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3">
+                            <input type="text" class="form-control" id="inputUsername" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่อ</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">ชื่อ</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3">
+                            <input type="text" class="form-control" id="inputName" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">นามสกุล</label>
+                        <label for="inputLastName" class="col-sm-2 col-form-label">นามสกุล</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3">
+                            <input type="text" class="form-control" id="inputLastName" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">หน้าที่</label>
+                        <label for="inputEmail" class="col-sm-2 col-form-label">อีเมล</label>
                         <div class="col-sm-10">
-                            <select class="custom-select">
-                                <option selected>หน้าที่</option>
+                            <input type="email" class="form-control" id="inputEmail" required name=un>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-2 col-form-label">หน้าที่</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select" required>
+                                <option value="">เลือกหน้าที่</option>
                                 <option value="1">หน้าที่ 1</option>
                                 <option value="2">หน้าที่ 2</option>
-                                <option value="3">หน้าที่ 3</option>
+                                <option value="3">แอดมิน</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">รหัสผ่าน</label>
+                        <label for="inputPassword1" class="col-sm-2 col-form-label">รหัสผ่าน</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3">
+                            <input type="password" class="form-control" id="inputPassword1" required name=up>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสผ่าน</label>
+                        <label for="inputPassword2" class="col-sm-2 col-form-label">ยืนยันรหัสผ่าน</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3">
+                            <input type="password" class="form-control" id="inputPassword2" required name=up2>
                         </div>
                     </div>
-
-
-
                 </form>
-
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
-                <button type="button" class="btn btn-primary">บันทึก</button>
+                <button type="submit" class="btn btn-primary">บันทึก</button>
             </div>
         </div>
     </div>

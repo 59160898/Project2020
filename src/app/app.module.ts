@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -64,7 +65,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

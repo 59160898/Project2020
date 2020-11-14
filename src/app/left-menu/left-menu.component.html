@@ -3,7 +3,7 @@
   <a href="Admin.html" class="brand-link">
     <img src="./assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
       style="opacity: .8">
-    <span class="brand-text font-weight-light">Bin Management</span>
+    <span class="brand-text font-weight-light">Waste Management</span>
   </a>
 
   <!-- Sidebar -->
@@ -102,27 +102,14 @@
 
         </li>
 
-        <li class="nav-item has-treeview">
-          <a href="#" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+        
+        <li class="nav-item">
+          <a (click)="manageUsers()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
             <i class="nav-icon fas fa-user"></i>
             <p class="h5">จัดการผู้ใช้</p>
-            <i class="fas fa-angle-left right"></i>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a (click)="manageUsers()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
-                <i class="far fa-circle nav-icon"></i>
-                <p class="h5">จัดการผู้ใช้ 1</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a (click)="manageUsers()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
-                <i class="far fa-circle nav-icon"></i>
-                <p class="h5">จัดการผู้ใช้ 2</p>
-              </a>
-            </li>
-          </ul>
         </li>
+
       </ul>
     </nav>
   </div>

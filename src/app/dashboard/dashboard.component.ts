@@ -53,20 +53,19 @@ export class DashboardComponent implements OnInit {
           }],
           xAxes: [{
             ticks: {
-              fontSize: 16,
+              fontSize: 18,
               fontColor: 'black'
             }
           }]
         },
         legend: {
           labels: {
-              // This more specific font property overrides the global property
-              fontColor: 'black',
-              fontSize: 18
+            fontColor: 'black',
+            fontSize: 18
 
           }
-      },
-      responsive: false
+        },
+        responsive: true
       }
     });
 
@@ -82,12 +81,19 @@ export class DashboardComponent implements OnInit {
             '#ED7D31',
             '#A5A5A5',
             '#3CB371'
-        ],
+          ],
           data: [10, 20, 30, 80]
         }
         ]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: 'black',
+            fontSize: 18
+          }
+        }
       }
-      
     });
 
     this.canvas = document.getElementById('donutChart');
@@ -102,12 +108,20 @@ export class DashboardComponent implements OnInit {
             '#3CB371',
             '#F5C340',
             '#CC0000'
-        ],
+          ],
           data: [10, 20, 30, 80]
         }
         ]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontColor: 'black',
+            fontSize: 18
+          }
+        }
       }
-      
+
     });
   }
 
