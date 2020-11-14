@@ -22,4 +22,4 @@ describe('TrashreportComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 
