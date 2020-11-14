@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -18,27 +17,30 @@ import { AdddriverComponent } from './adddriver/adddriver.component';
 import { AddcollectortrashComponent } from './addcollectortrash/addcollectortrash.component';
 import { AddtruckComponent } from './addtruck/addtruck.component';
 import { DetailtrashdataComponent } from './detailtrashdata/detailtrashdata.component';
-import { TrashreportComponent } from './trashreport/trashreport.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
 import { ManageUsersComponent } from './manage-users/manage-users.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guards/auth.guard';
+
 
 const appRoutes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'trashmanage', component: TrashmanageComponent},
-  { path: 'device', component: DeviceComponent },
-  { path: 'report', component: ReportComponent },
-  { path: 'setting', component: SettingComponent },
-  { path: 'addtrash', component: AddtrashComponent },
-  { path: 'addtypetrash', component: AddtypetrashComponent},
-  { path: 'addroutecollectiontrash', component: AddroutecollectiontrashComponent},
-  { path: 'adddriver', component: AdddriverComponent},
-  { path: 'addcollectortrash', component: AddcollectortrashComponent},
-  { path: 'addtruck', component: AddtruckComponent},
-  { path: 'detailtrashdata', component: DetailtrashdataComponent},
-  { path: 'manageUsers', component: ManageUsersComponent},
-  { path: 'trashreport', component: TrashreportComponent}
+  { path: '', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuard] },
+  { path: 'trashmanage', component: TrashmanageComponent,canActivate: [AuthGuard] },
+{ path: 'device', component: DeviceComponent,canActivate: [AuthGuard] },
+{ path: 'report', component: ReportComponent,canActivate: [AuthGuard] },
+{ path: 'setting', component: SettingComponent,canActivate: [AuthGuard] },
+{ path: 'addtrash', component: AddtrashComponent,canActivate: [AuthGuard] },
+{ path: 'addtypetrash', component: AddtypetrashComponent,canActivate: [AuthGuard] },
+{ path: 'addroutecollectiontrash', component: AddroutecollectiontrashComponent,canActivate: [AuthGuard] },
+{ path: 'adddriver', component: AdddriverComponent,canActivate: [AuthGuard] },
+{ path: 'addcollectortrash', component: AddcollectortrashComponent,canActivate: [AuthGuard] },
+{ path: 'addtruck', component: AddtruckComponent,canActivate: [AuthGuard] },
+{ path: 'detailtrashdata', component: DetailtrashdataComponent,canActivate: [AuthGuard] },
+{ path: 'manageUsers', component: ManageUsersComponent,canActivate: [AuthGuard] }
+
 ]
 
 @NgModule({
@@ -59,14 +61,13 @@ const appRoutes: Routes = [
     AddtruckComponent,
     DetailtrashdataComponent,
     ManageUsersComponent,
-    TrashreportComponent
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
