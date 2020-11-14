@@ -30,24 +30,38 @@
             <p class="h5">อุปกรณ์<span class="right badge badge-danger">3</span></p>
           </a>
         </li>
-        <li class="nav-item">
-          <a (click)="report()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
             <i class="nav-icon fas fa-file"></i>
             <p class="h5">รายงาน</p>
+            <i class="fas fa-angle-left right"></i>
           </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a (click)="trashreport()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <p class="h5">รายงานเกี่ยวกับข้อมูลขยะ</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="report()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <p class="h5">รายงานเกี่ยวกับอุปกรณ์</p>
+              </a>
+            </li>
+          </ul>
         </li>
 
         <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
             <i class="nav-icon fas fa-cog"></i>
             <p class="h5">
               การตั้งค่า
-              <i class="fas fa-angle-left right"></i>
+              <i class="right fas fa-angle-left"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
                 <p class="h5">
                   เกี่ยวกับข้อมูลขยะ
                   <i class="right fas fa-angle-left"></i>
@@ -55,35 +69,37 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a (click)="addtypetrash()" class="nav-link">
-                    <p>ข้อมูลประเภทของขยะ</p>
+                  <a (click)="addtypetrash()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                    <p>จัดการประเภทของขยะ</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="addroutecollectiontrash()" class="nav-link">
-                    <p>ข้อมูลเส้นทางการเก็บขน</p>
+                  <a (click)="addroutecollectiontrash()" class="nav-link" data-toggle="pill"
+                    style="cursor: hand;cursor: pointer;">
+                    <p>จัดการเส้นทางการเก็บขน</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="adddriver()" class="nav-link">
-                    <p>ข้อมูลพนักงานขับรถ</p>
+                  <a (click)="adddriver()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                    <p>จัดการพนักงานขับรถ</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="addcollectortrash()" class="nav-link">
-                    <p>ข้อมูลพนักงานเก็บขน</p>
+                  <a (click)="addcollectortrash()" class="nav-link" data-toggle="pill"
+                    style="cursor: hand;cursor: pointer;">
+                    <p>จัดการพนักงานเก็บขน</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a (click)="addtruck()" class="nav-link">
-                    <p>ข้อมูลรถขยะ</p>
+                  <a (click)="addtruck()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                    <p>จัดการรถขยะ</p>
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
-        
+
         <li class="nav-item">
           <a (click)="manageUsers()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
             <i class="nav-icon fas fa-user"></i>

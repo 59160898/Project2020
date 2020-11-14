@@ -25,6 +25,11 @@ export class LeftMenuComponent implements OnInit {
     this.router.navigate(['device']);
   }
 
+  trashreport(){
+    this.router.navigate(['trashreport']);
+
+  }
+
   report(){
     this.router.navigate(['report']);
   }
@@ -58,5 +63,6 @@ export class LeftMenuComponent implements OnInit {
     this.router.navigate(['manageUsers']);
 
   }
+
 
 }

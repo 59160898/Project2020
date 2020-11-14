@@ -2,103 +2,19 @@
     <div class="card-header">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <p class="h5 d-inline-block font-weight-bold">เพิ่มข้อมูลพนักงานเก็บขน</p>
+                <p class="h5 d-inline-block font-weight-bold">เพิ่มพนักงานเก็บขน</p>
             </li>
         </ul>
     </div>
     <div class="card-body">
-        <form role="form">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>ชื่อ</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>นามสกุล</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>รหัสบัตรประจำตัวประชาชน</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label>บ้านเลขที่</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label>หมู่</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>ถนน</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>ตำบล</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>อำเภอ</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>จังหวัด</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>รหัสไปรษณีย์</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label>เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-        </form>
-
-        <ul class="nav justify-content-center">
-            <button type="submit" class="btn btn-primary">บันทึก</button>
-            &nbsp;&nbsp;&nbsp;
-            <button type="submit" class="btn btn-default">ยกเลิก</button>
-        </ul>
-    </div>
-    <!-- /.card-body -->
-</div>
-
-<div class="card card-light">
-    <div class="card-body">
         <div class="chart">
-            <p class="h5 d-inline-block font-weight-bold">รายการข้อมูลพนักงานเก็บขน</p>
-            <br><br>
+            <ul class="nav justify-content-end">
+                <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-plus fa-fw"></i>
+                    เพิ่มพนักงานเก็บขน
+                </button>
+            </ul>
+            <br>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -119,6 +35,7 @@
                         <td>65 ถ.ลงหาดบางแสนใต้ ต.แสนสุข อ.เมือง จ.ชลบุรี 20130</td>
                         <td>0908423615</td>
                         <td>
+                            <ul class="nav justify-content-end">
                             <button type="button" class="btn btn-sm btn-warning">
                                 <i class="fa fa-edit fa-fw"></i>
                                 แก้ไข
@@ -127,6 +44,7 @@
                                 <i class="nav-icon fas fa-trash fa-fw"></i>
                                 ลบ
                             </button>
+                            </ul>
                         </td>
                     </tr>
                     <tr>
@@ -136,6 +54,7 @@
                         <td>74 ถ.ลงหาดบางแสนใต้ ต.แสนสุข อ.เมือง จ.ชลบุรี 20130</td>
                         <td>0918461527</td>
                         <td>
+                            <ul class="nav justify-content-end">
                             <button type="button" class="btn btn-sm btn-warning">
                                 <i class="fa fa-edit fa-fw"></i>
                                 แก้ไข
@@ -144,6 +63,7 @@
                                 <i class="nav-icon fas fa-trash fa-fw"></i>
                                 ลบ
                             </button>
+                            </ul>
                         </td>
                     </tr>
                     <tr>
@@ -153,6 +73,7 @@
                         <td>28 ถ.ลงหาดบางแสนใต้ ต.แสนสุข อ.เมือง จ.ชลบุรี 20130</td>
                         <td>0615832014</td>
                         <td>
+                            <ul class="nav justify-content-end">
                             <button type="button" class="btn btn-sm btn-warning">
                                 <i class="fa fa-edit fa-fw"></i>
                                 แก้ไข
@@ -161,6 +82,7 @@
                                 <i class="nav-icon fas fa-trash fa-fw"></i>
                                 ลบ
                             </button>
+                            </ul>
                         </td>
                     </tr>
 
@@ -169,6 +91,82 @@
 
         </div>
 
-    </div>
     <!-- /.card-body -->
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มพนักงานเก็บขน</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>ชื่อ</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>นามสกุล</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>หมายเลขประจำตัวประชาชน</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>บ้านเลขที่</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>หมู่</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>ถนน</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>ตำบล</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>อำเภอ</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>จังหวัด</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>รหัสไปรษณีย์</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>หมายเลขโทรศัพท์</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">บันทึก</button>
+            </div>
+        </div>
+    </div>
 </div>
