@@ -27,19 +27,19 @@ import { AuthGuard } from './guards/auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'trashmanage', component: TrashmanageComponent, canActivate: [AuthGuard] },
-  { path: 'device', component: DeviceComponent, canActivate: [AuthGuard] },
-  { path: 'report', component: ReportComponent, canActivate: [AuthGuard] },
-  { path: 'setting', component: SettingComponent, canActivate: [AuthGuard] },
-  { path: 'addtrash', component: AddtrashComponent, canActivate: [AuthGuard] },
-  { path: 'addtypetrash', component: AddtypetrashComponent, canActivate: [AuthGuard] },
-  { path: 'addroutecollectiontrash', component: AddroutecollectiontrashComponent, canActivate: [AuthGuard] },
-  { path: 'adddriver', component: AdddriverComponent, canActivate: [AuthGuard] },
-  { path: 'addcollectortrash', component: AddcollectortrashComponent, canActivate: [AuthGuard] },
-  { path: 'addtruck', component: AddtruckComponent, canActivate: [AuthGuard] },
-  { path: 'detailtrashdata', component: DetailtrashdataComponent, canActivate: [AuthGuard] },
-  { path: 'manageUsers', component: ManageUsersComponent, canActivate: [AuthGuard] }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'trashmanage', component: TrashmanageComponent },
+  { path: 'device', component: DeviceComponent },
+  { path: 'report', component: ReportComponent },
+  { path: 'setting', component: SettingComponent },
+  { path: 'addtrash', component: AddtrashComponent },
+  { path: 'addtypetrash', component: AddtypetrashComponent },
+  { path: 'addroutecollectiontrash', component: AddroutecollectiontrashComponent },
+  { path: 'adddriver', component: AdddriverComponent },
+  { path: 'addcollectortrash', component: AddcollectortrashComponent },
+  { path: 'addtruck', component: AddtruckComponent },
+  { path: 'detailtrashdata', component: DetailtrashdataComponent },
+  { path: 'manageUsers', component: ManageUsersComponent }
 
 ]
 
