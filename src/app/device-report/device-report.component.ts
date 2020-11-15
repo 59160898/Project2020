@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
 import * as Chart from 'chart.js';
 
-
 @Component({
-  selector: 'app-report',
-  templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss']
-}) 
-export class ReportComponent implements OnInit {
+  selector: 'app-device-report',
+  templateUrl: './device-report.component.html',
+  styleUrls: ['./device-report.component.scss']
+})
+export class DeviceReportComponent implements OnInit {
 
   canvas: any;
   ctx: any;
@@ -71,5 +69,5 @@ export class ReportComponent implements OnInit {
       }
     });
   }
-}
 
+}
