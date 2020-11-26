@@ -22,75 +22,33 @@
                         <th scope="col">ลำดับ</th>
                         <th scope="col">ทะเบียนรถขยะ</th>
                         <th scope="col">ชนิดรถขยะ</th>
-                        <th scope="col">สี</th>
                         <th scope="col">ชนิดเครื่องยนต์</th>
                         <th scope="col">ขนาดความจุ(ลบม.)</th>
-                        <th scope="col">วันหยุดทำการประจำสัปดาห์</th>
-                        <th scope="col">เวลาเริ่มการจัดเก็บ</th>
-                        <th scope="col">เวลาสิ้นสุดการจัดเก็บ</th>
+                        <th scope="col">สี</th>
+                        <th scope="col">วันหยุดประจำสัปดาห์</th>
+                        <th scope="col">เวลาเริ่มเก็บ</th>
+                        <th scope="col">เวลาหยุดเก็บ</th>
                         <th></th>
                     </tr>
                 </thead>
                       
                 <tbody>  
-                    <tr>
-                        <td>1</td>
-                        <td>85-9983</td> 
-                        <td>อัดท้าย</td>
-                        <td>เขียว</td>
-                        <td>ดีเซลล์</td>
-                        <td>10</td>
-                        <td>จันทร์</td>
-                        <td>00:01</td>
-                        <td>08:30</td>
+                    <tr *ngFor="let item of vehicles; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ item.vehicle_license }}</td> 
+                        <td>{{ item.vehicle_type }}</td>
+                        <td>{{ item.engine_type }}</td>
+                        <td>{{ item.vehicle_capacity }}</td>
+                        <td>{{ item.vehicle_color }}</td>
+                        <td>{{ item.holiday }}</td>
+                        <td>{{ item.start_time }}</td>
+                        <td>{{ item.stop_time }}</td>
                         <td>
                             <button type="button" class="btn btn-sm btn-warning">
                                 <i class="fa fa-edit fa-fw"></i>
                                 แก้ไข
                             </button>&nbsp;
-                            <button type="button" class="btn btn-sm btn-danger">
-                                <i class="nav-icon fas fa-trash fa-fw"></i>
-                                ลบ
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>  
-                        <td>85-9984</td> 
-                        <td>อัดท้าย</td>
-                        <td>เขียว</td>
-                        <td>ดีเซลล์</td>
-                        <td>12</td>
-                        <td>อังคาร</td>
-                        <td>00:01</td>
-                        <td>08:30</td>
-                        <td>
-                            <button type="button" class="btn btn-sm btn-warning">
-                                <i class="fa fa-edit fa-fw"></i>
-                                แก้ไข
-                            </button>&nbsp;
-                            <button type="button" class="btn btn-sm btn-danger">
-                                <i class="nav-icon fas fa-trash fa-fw"></i>
-                                ลบ
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>85-9985</td> 
-                        <td>อัดท้าย</td>
-                        <td>เหลือง</td>
-                        <td>ดีเซลล์</td>
-                        <td>11</td>
-                        <td>พุธ</td>
-                        <td>00:01</td>
-                        <td>08:30</td>
-                        <td>
-                            <button type="button" class="btn btn-sm btn-warning">
-                                <i class="fa fa-edit fa-fw"></i>
-                                แก้ไข
-                            </button>&nbsp;
-                            <button type="button" class="btn btn-sm btn-danger">
+                            <button type="button" class="btn btn-sm btn-danger" (click)="VehiclesDelete(item)">
                                 <i class="nav-icon fas fa-trash fa-fw"></i>
                                 ลบ
                             </button>
@@ -120,48 +78,48 @@
                     <div class="form-group row">
                         <div class="col-sm-6">
                             <label>ทะเบียนรถขยะ</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="vehicle_license" [(ngModel)]="vehicle_license">
                         </div>
                         <div class="col-sm-6">
                             <label>ชนิดรถขยะ</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="vehicle_type" [(ngModel)]="vehicle_type">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6">
+                            <label>ชนิดเครื่องยนต์</label>
+                            <input type="text" class="form-control" placeholder="" name="engine_type" [(ngModel)]="engine_type">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>ขนาดความจุ(ลบม.)</label>
+                            <input type="text" class="form-control" placeholder="" name="vehicle_capacity" [(ngModel)]="vehicle_capacity">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6">
                             <label>สี</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" name="vehicle_color" [(ngModel)]="vehicle_color">
                         </div>
                         <div class="col-sm-6">
-                            <label>ชนิดเครื่องยนต์</label>
-                            <input type="text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>ขนาดความจุ(ลบม.)</label>
-                            <input type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>วันหยุดทำการประจำสัปดาห์</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <label>วันหยุดประจำสัปดาห์</label>
+                            <input type="text" class="form-control" placeholder="" name="holiday" [(ngModel)]="holiday">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <label>เวลาเริ่มการจัดเก็บ</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <label>เวลาเริ่มเก็บ</label>
+                            <input type="text" class="form-control" placeholder="" name="start_time" [(ngModel)]="start_time">
                         </div>
                         <div class="col-sm-6">
-                            <label>เวลาสิ้นสุดการจัดเก็บ</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <label>เวลาหยุดเก็บ</label>
+                            <input type="text" class="form-control" placeholder="" name="stop_time" [(ngModel)]="stop_time">
                         </div>
                     </div>
                 </form>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">บันทึก</button>
+                <button type="button" class="btn btn-primary" (click)="save()" data-dismiss="modal">บันทึก</button>
             </div>
         </div>
     </div>

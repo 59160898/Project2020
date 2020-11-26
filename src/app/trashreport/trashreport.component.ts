@@ -66,7 +66,7 @@ export class TrashreportComponent implements OnInit {
               fontSize: 18
           }
       },
-        responsive: false
+        responsive: true
       }
     });
   }
