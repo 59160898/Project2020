@@ -1,128 +1,135 @@
-<div class="card card-light">
-    <div class="card-header">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <p class="h5 d-inline-block font-weight-bold">เพิ่มรถขยะ</p>
-            </li>
-        </ul>
-    </div>
-    <div class="card-body">
-        <div class="row">
-        <div class="chart">
-            <ul class="nav justify-content-end">
-                <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fas fa-plus fa-fw"></i>
-                    เพิ่มรถขยะ
-                </button>
-            </ul>
-            <br>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">ลำดับ</th>
-                        <th scope="col">ทะเบียนรถขยะ</th>
-                        <th scope="col">ชนิดรถขยะ</th>
-                        <th scope="col">ชนิดเครื่องยนต์</th>
-                        <th scope="col">ขนาดความจุ(ลบม.)</th>
-                        <th scope="col">สี</th>
-                        <th scope="col">วันหยุดประจำสัปดาห์</th>
-                        <th scope="col">เวลาเริ่มเก็บ</th>
-                        <th scope="col">เวลาหยุดเก็บ</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                      
-                <tbody>  
-                    <tr *ngFor="let item of vehicles; let i = index">
-                        <td>{{ i + 1 }}</td>
-                        <td>{{ item.vehicle_license }}</td> 
-                        <td>{{ item.vehicle_type }}</td>
-                        <td>{{ item.engine_type }}</td>
-                        <td>{{ item.vehicle_capacity }}</td>
-                        <td>{{ item.vehicle_color }}</td>
-                        <td>{{ item.holiday }}</td>
-                        <td>{{ item.start_time }}</td>
-                        <td>{{ item.stop_time }}</td>
-                        <td>
-                            <button type="button" class="btn btn-sm btn-warning">
-                                <i class="fa fa-edit fa-fw"></i>
-                                แก้ไข
-                            </button>&nbsp;
-                            <button type="button" class="btn btn-sm btn-danger" (click)="VehiclesDelete(item)">
-                                <i class="nav-icon fas fa-trash fa-fw"></i>
-                                ลบ
+<div class="content-wrapper">
+    <div style="padding: 20px">
+
+        <div class="card card-light">
+            <div class="card-header">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <p class="h5 d-inline-block font-weight-bold">เพิ่มรถขยะ</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="chart">
+                        <ul class="nav justify-content-end">
+                            <button type="button" class="btn btn-success mb-3" data-toggle="modal"
+                                data-target="#exampleModal">
+                                <i class="fas fa-plus fa-fw"></i>
+                                เพิ่มรถขยะ
                             </button>
-                        </td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+                        </ul>
+                        <br>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ลำดับ</th>
+                                    <th scope="col">ทะเบียนรถขยะ</th>
+                                    <th scope="col">ชนิดรถขยะ</th>
+                                    <th scope="col">ชนิดเครื่องยนต์</th>
+                                    <th scope="col">ขนาดความจุ(ลบม.)</th>
+                                    <th scope="col">สี</th>
+                                    <th scope="col">วันหยุดประจำสัปดาห์</th>
+                                    <th scope="col">เวลาเริ่มเก็บ</th>
+                                    <th scope="col">เวลาหยุดเก็บ</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                                  
+                            <tbody>  
+                                <tr *ngFor="let item of vehicles; let i = index">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{ item.vehicle_license }}</td> 
+                                    <td>{{ item.vehicle_type }}</td>
+                                    <td>{{ item.engine_type }}</td>
+                                    <td>{{ item.vehicle_capacity }}</td>
+                                    <td>{{ item.vehicle_color }}</td>
+                                    <td>{{ item.holiday }}</td>
+                                    <td>{{ item.start_time }}</td>
+                                    <td>{{ item.stop_time }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-warning">
+                                            <i class="fa fa-edit fa-fw"></i>
+                                            แก้ไข
+                                        </button>&nbsp;
+                                        <button type="button" class="btn btn-sm btn-danger" (click)="VehiclesDelete(item)">
+                                            <i class="nav-icon fas fa-trash fa-fw"></i>
+                                            ลบ
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
 
+                    </div>
+                </div>
+            </div>
+            <!-- /.card-body -->
         </div>
-    </div>
-    </div>
-    <!-- /.card-body -->
-</div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มรถขยะ</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>ทะเบียนรถขยะ</label>
-                            <input type="text" class="form-control" placeholder="" name="vehicle_license" [(ngModel)]="vehicle_license">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>ชนิดรถขยะ</label>
-                            <input type="text" class="form-control" placeholder="" name="vehicle_type" [(ngModel)]="vehicle_type">
-                        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มรถขยะ</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>ชนิดเครื่องยนต์</label>
-                            <input type="text" class="form-control" placeholder="" name="engine_type" [(ngModel)]="engine_type">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>ขนาดความจุ(ลบม.)</label>
-                            <input type="text" class="form-control" placeholder="" name="vehicle_capacity" [(ngModel)]="vehicle_capacity">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>สี</label>
-                            <input type="text" class="form-control" placeholder="" name="vehicle_color" [(ngModel)]="vehicle_color">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>วันหยุดประจำสัปดาห์</label>
-                            <input type="text" class="form-control" placeholder="" name="holiday" [(ngModel)]="holiday">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>เวลาเริ่มเก็บ</label>
-                            <input type="text" class="form-control" placeholder="" name="start_time" [(ngModel)]="start_time">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>เวลาหยุดเก็บ</label>
-                            <input type="text" class="form-control" placeholder="" name="stop_time" [(ngModel)]="stop_time">
-                        </div>
-                    </div>
-                </form>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label>ทะเบียนรถขยะ</label>
+                                    <input type="text" class="form-control" placeholder="" name="vehicle_license" [(ngModel)]="vehicle_license">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>ชนิดรถขยะ</label>
+                                    <input type="text" class="form-control" placeholder="" name="vehicle_type" [(ngModel)]="vehicle_type">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label>ชนิดเครื่องยนต์</label>
+                                    <input type="text" class="form-control" placeholder="" name="engine_type" [(ngModel)]="engine_type">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>ขนาดความจุ(ลบม.)</label>
+                                    <input type="text" class="form-control" placeholder="" name="vehicle_capacity" [(ngModel)]="vehicle_capacity">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label>สี</label>
+                                    <input type="text" class="form-control" placeholder="" name="vehicle_color" [(ngModel)]="vehicle_color">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>วันหยุดประจำสัปดาห์</label>
+                                    <input type="text" class="form-control" placeholder="" name="holiday" [(ngModel)]="holiday">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label>เวลาเริ่มเก็บ</label>
+                                    <input type="text" class="form-control" placeholder="" name="start_time" [(ngModel)]="start_time">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>เวลาหยุดเก็บ</label>
+                                    <input type="text" class="form-control" placeholder="" name="stop_time" [(ngModel)]="stop_time">
+                                </div>
+                            </div>
+                        </form>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" (click)="save()" data-dismiss="modal">บันทึก</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" (click)="save()" data-dismiss="modal">บันทึก</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+
     </div>
 </div>
-
-

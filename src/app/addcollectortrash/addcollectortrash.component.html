@@ -1,145 +1,152 @@
-<div class="card card-light">
-    <div class="card-header">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <p class="h5 d-inline-block font-weight-bold">เพิ่มพนักงานเก็บขน</p>
-            </li>
-        </ul>
-    </div>
-    <div class="card-body">
-        <div class="chart">
-            <ul class="nav justify-content-end">
-                <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fas fa-plus fa-fw"></i>
-                    เพิ่มพนักงานเก็บขน
-                </button>
-            </ul>
-            <br>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">ลำดับ</th>
-                        <th scope="col">คำนำหน้า</th>
-                        <th scope="col">ชื่อ-นามสกุล</th>
-                        <th scope="col">รหัสบัตรประจำตัวประชาชน</th>
-                        <th scope="col">ที่อยู่</th>
-                        <th scope="col">เบอร์โทรศัพท์</th>
-                        <th></th>
-                    </tr>
-                </thead>
+<div class="content-wrapper">
+    <div style="padding: 20px">
+        <div class="card card-light">
+            <div class="card-header">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <p class="h5 d-inline-block font-weight-bold">เพิ่มพนักงานเก็บขน</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="chart">
+                    <ul class="nav justify-content-end">
+                        <button type="button" class="btn btn-success mb-3" data-toggle="modal"
+                            data-target="#exampleModal">
+                            <i class="fas fa-plus fa-fw"></i>
+                            เพิ่มพนักงานเก็บขน
+                        </button>
+                    </ul>
+                    <br>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ลำดับ</th>
+                                <th scope="col">คำนำหน้า</th>
+                                <th scope="col">ชื่อ-นามสกุล</th>
+                                <th scope="col">รหัสบัตรประจำตัวประชาชน</th>
+                                <th scope="col">ที่อยู่</th>
+                                <th scope="col">เบอร์โทรศัพท์</th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-                <tbody>
-                    <tr *ngFor="let item of collectors; let i = index">
-                        <td>{{ i + 1 }}</td>
-                        <td>{{ item.prefix }}</td>
-                        <td>{{ item.firstname }} {{ item.lastname }}</td>
-                        <td>{{ item.national_id }}</td>
-                        <td>{{ item.house_number }} หมู่ {{ item.moo }} ถ.{{ item.road }} ต.{{ item.sub_district }} อ.{{ item.district }} 
-                            จ.{{ item.province }} {{ item.postcode }}
-                        </td>
-                        <td>{{ item.phone }}</td>
-                        <td>
-                            <ul class="nav justify-content-end">
-                            <button type="button" class="btn btn-sm btn-warning">
-                                <i class="fa fa-edit fa-fw"></i>
-                                แก้ไข
-                            </button>&nbsp;
-                            <button type="button" class="btn btn-sm btn-danger" (click)="CollectorsDelete(item)">
-                                <i class="nav-icon fas fa-trash fa-fw"></i>
-                                ลบ
-                            </button>
-                            </ul>
-                        </td>
-                    </tr>
+                        <tbody>
+                            
+                                <tr *ngFor="let item of collectors; let i = index">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{ item.prefix }}</td>
+                                    <td>{{ item.firstname }} {{ item.lastname }}</td>
+                                    <td>{{ item.national_id }}</td>
+                                    <td>{{ item.house_number }} หมู่ {{ item.moo }} ถ.{{ item.road }} ต.{{ item.sub_district }} อ.{{ item.district }} 
+                                        จ.{{ item.province }} {{ item.postcode }}
+                                    </td>
+                                    <td>{{ item.phone }}</td>
+                                    <td>
+                                        <ul class="nav justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-warning">
+                                            <i class="fa fa-edit fa-fw"></i>
+                                            แก้ไข
+                                        </button>&nbsp;
+                                        <button type="button" class="btn btn-sm btn-danger" (click)="CollectorsDelete(item)">
+                                            <i class="nav-icon fas fa-trash fa-fw"></i>
+                                            ลบ
+                                        </button>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            
                     
+                        </tbody>
+                    </table>
 
-                </tbody>
-            </table>
+                </div>
 
-        </div>
-
-    <!-- /.card-body -->
-</div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มพนักงานเก็บขน</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <!-- /.card-body -->
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>คำนำหน้า</label>
-                            <input type="text" class="form-control" placeholder="" name="prefix" [(ngModel)]="prefix">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มพนักงานเก็บขน</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>คำนำหน้า</label>
+                                        <input type="text" class="form-control" placeholder="" name="prefix" [(ngModel)]="prefix">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>ชื่อ</label>
+                                        <input type="text" class="form-control" placeholder="" name="firstname" [(ngModel)]="firstname">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>นามสกุล</label>
+                                        <input type="text" class="form-control" placeholder="" name="lastname" [(ngModel)]="lastname">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>หมายเลขประจำตัวประชาชน</label>
+                                        <input type="text" class="form-control" placeholder="" name="national_id" [(ngModel)]="national_id">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>บ้านเลขที่</label>
+                                        <input type="text" class="form-control" placeholder="" name="house_number" [(ngModel)]="house_number">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>หมู่</label>
+                                        <input type="text" class="form-control" placeholder="" name="moo" [(ngModel)]="moo">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>ถนน</label>
+                                        <input type="text" class="form-control" placeholder="" name="road" [(ngModel)]="road">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>ตำบล</label>
+                                        <input type="text" class="form-control" placeholder="" name="sub_district" [(ngModel)]="sub_district">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>อำเภอ</label>
+                                        <input type="text" class="form-control" placeholder="" name="district" [(ngModel)]="district">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>จังหวัด</label>
+                                        <input type="text" class="form-control" placeholder="" name="province" [(ngModel)]="province">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>รหัสไปรษณีย์</label>
+                                        <input type="text" class="form-control" placeholder="" name="postcode" [(ngModel)]="postcode">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <label>หมายเลขโทรศัพท์</label>
+                                        <input type="text" class="form-control" placeholder="" name="phone" [(ngModel)]="phone">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" (click)="save()" data-dismiss="modal">บันทึก</button>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>ชื่อ</label>
-                            <input type="text" class="form-control" placeholder="" name="firstname" [(ngModel)]="firstname">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>นามสกุล</label>
-                            <input type="text" class="form-control" placeholder="" name="lastname" [(ngModel)]="lastname">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>หมายเลขประจำตัวประชาชน</label>
-                            <input type="text" class="form-control" placeholder="" name="national_id" [(ngModel)]="national_id">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>บ้านเลขที่</label>
-                            <input type="text" class="form-control" placeholder="" name="house_number" [(ngModel)]="house_number">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>หมู่</label>
-                            <input type="text" class="form-control" placeholder="" name="moo" [(ngModel)]="moo">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>ถนน</label>
-                            <input type="text" class="form-control" placeholder="" name="road" [(ngModel)]="road">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>ตำบล</label>
-                            <input type="text" class="form-control" placeholder="" name="sub_district" [(ngModel)]="sub_district">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>อำเภอ</label>
-                            <input type="text" class="form-control" placeholder="" name="district" [(ngModel)]="district">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>จังหวัด</label>
-                            <input type="text" class="form-control" placeholder="" name="province" [(ngModel)]="province">
-                        </div>
-                        <div class="col-sm-6">
-                            <label>รหัสไปรษณีย์</label>
-                            <input type="text" class="form-control" placeholder="" name="postcode" [(ngModel)]="postcode">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label>หมายเลขโทรศัพท์</label>
-                            <input type="text" class="form-control" placeholder="" name="phone" [(ngModel)]="phone">
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" (click)="save()" data-dismiss="modal">บันทึก</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+

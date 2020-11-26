@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import * as Chart from 'chart.js';
 
 @Component({
@@ -12,7 +11,8 @@ export class DashboardComponent implements OnInit {
   canvas: any;
   ctx: any;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.canvas = document.getElementById('myChart');

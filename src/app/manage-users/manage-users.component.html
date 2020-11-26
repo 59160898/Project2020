@@ -1,233 +1,155 @@
-<div class="container-fluid">
-    <div class="card">
-        <h4 class="card-header font-weight-bold">จัดการผู้ใช้</h4>
-        <div class="card-body">
-            <form class="form-inline d-inline-block mb-3">
-                <div class="form-group">
-                    <label>ค้นหา: </label>
-                    <input type="search" class="form-control mx-sm-3" aria-label="Search">
+<div class="content-wrapper">
+    <div style="padding: 20px">
+        <div class="container-fluid">
+            <div class="card">
+                <h4 class="card-header font-weight-bold">จัดการผู้ใช้</h4>
+                <div class="card-body">
+                    <form class="form-inline d-inline-block mb-3">
+                        <div class="form-group">
+                            <label>ค้นหา: </label>
+                            <input type="search" class="form-control mx-sm-3" aria-label="Search">
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal"
+                        data-target="#exampleModal">
+                        <i class="fa fa-user-plus fa-lg fa-fw" aria-hidden="true"></i>
+                        เพิ่มผู้ใช้
+                    </button>
+                    <table class="table table-striped text-center table-responsive-md">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" style="width: 5%">#</th>
+                                <th scope="col">ชื่อ</th>
+                                <th scope="col">นามสกุล</th>
+                                <th scope="col">หน้าที่</th>
+                                <th scope="col" style="width: 30%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of Users">
+                                <th scope="row">1</th>
+                                <td>{{ item.firstname }}</td>
+                                <td>{{ item.lastname }}</td>
+                                <td>{{ item.status }}</td>
+                                <td>
+                                    <ul class="list-inline m-0">
+                                        <li class="list-inline-item">
+                                            <button type="button" class="btn btn-primary"><i
+                                                    class="fas fa-eye fa-fw"></i>รายละเอียด</button>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <button type="button" class="btn btn-warning"><i
+                                                    class="fas fa-pen fa-fw"></i>แก้ไข</button>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <button type="button" class="btn btn-danger"><i
+                                                    class="fas fa-trash fa-fw"></i>ลบ</button>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <label class="mr-2 d-inline-block">รายการที่ 1 ถึง 5 จากทั้งหมด 10 รายการ</label>
+                    <div class="mr-2 d-inline-block" style="width: 5%">
+                        <select class="custom-select">
+                            <option selected>5</option>
+                            <option value="1">10</option>
+                            <option value="2">15</option>
+                        </select>
+                    </div>
+                    <label>รายการต่อหน้า</label>
+                    <ul class="pagination m-0 float-right">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">ก่อนหน้า</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">ต่อไป</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </form>
-            <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal"
-                data-target="#exampleModal">
-                <i class="fa fa-user-plus fa-lg fa-fw" aria-hidden="true"></i>
-                เพิ่มผู้ใช้
-            </button>
-            <table class="table table-striped text-center table-responsive-md">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" style="width: 5%">#</th>
-                        <th scope="col">ชื่อ</th>
-                        <th scope="col">นามสกุล</th>
-                        <th scope="col">หน้าที่</th>
-                        <th scope="col" style="width: 30%"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>อนุสรณ์</td>
-                        <td>แสงกล้า</td>
-                        <td>แอดมิน</td>
-                        <td>
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-primary"><i
-                                            class="fas fa-eye fa-fw"></i>รายละเอียด</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-warning"><i
-                                            class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-danger"><i
-                                            class="fas fa-trash fa-fw"></i>ลบ</button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>องอาจ</td>
-                        <td>หาญกล้า</td>
-                        <td>ผู้ใช้งาน</td>
-                        <td>
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-primary"><i
-                                            class="fas fa-eye fa-fw"></i>รายละเอียด</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-warning"><i
-                                            class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-danger"><i
-                                            class="fas fa-trash fa-fw"></i>ลบ</button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>ภักดี</td>
-                        <td>ชมจิต</td>
-                        <td>ผู้ใช้งาน</td>
-                        <td>
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-primary"><i
-                                            class="fas fa-eye fa-fw"></i>รายละเอียด</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-warning"><i
-                                            class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-danger"><i
-                                            class="fas fa-trash fa-fw"></i>ลบ</button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>สุชาติ</td>
-                        <td>สานฝัน</td>
-                        <td>ผู้ใช้งาน</td>
-                        <td>
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-primary"><i
-                                            class="fas fa-eye fa-fw"></i>รายละเอียด</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-warning"><i
-                                            class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-danger"><i
-                                            class="fas fa-trash fa-fw"></i>ลบ</button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>ผดุง</td>
-                        <td>อวยชัย</td>
-                        <td>ผู้ใช้งาน</td>
-                        <td>
-                            <ul class="list-inline m-0">
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-primary"><i
-                                            class="fas fa-eye fa-fw"></i>รายละเอียด</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-warning"><i
-                                            class="fas fa-pen fa-fw"></i>แก้ไข</button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button type="button" class="btn btn-danger"><i
-                                            class="fas fa-trash fa-fw"></i>ลบ</button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <label class="mr-2 d-inline-block">รายการที่ 1 ถึง 5 จากทั้งหมด 10 รายการ</label>
-            <div class="mr-2 d-inline-block" style="width: 5%">
-                <select class="custom-select">
-                    <option selected>5</option>
-                    <option value="1">10</option>
-                    <option value="2">15</option>
-                </select>
             </div>
-            <label>รายการต่อหน้า</label>
-            <ul class="pagination m-0 float-right">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">ก่อนหน้า</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">ต่อไป</span>
-                    </a>
-                </li>
-            </ul>
         </div>
-    </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มผู้ใช้</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="container" action="/newaccount" method=post
-                    oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
-                    <div class="form-group row required">
-                        <label for="inputUsername" class="col-sm-2 control-label">ชื่อผู้ใช้</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputUsername" required>
-                        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title font-weight-bold" id="exampleModalLabel">เพิ่มผู้ใช้</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="form-group row required">
-                        <label for="inputName" class="col-sm-2 control-label">ชื่อ</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" required>
-                        </div>
+                    <div class="modal-body">
+                        <form class="container was-validated" action="/newaccount" method=post
+                            oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
+                            <div class="form-group row required">
+                                <label for="inputUsername" class="col-sm-2 control-label">ชื่อผู้ใช้</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputUsername" name="username"
+                                        [(ngModel)]="username" required>
+                                </div>
+                            </div>
+                            <div class="form-group row required">
+                                <label for="inputName" class="col-sm-2 control-label">ชื่อ</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputName" name="firstname"
+                                        [(ngModel)]="firstname" required>
+                                </div>
+                            </div>
+                            <div class="form-group row required">
+                                <label for="inputLastName" class="col-sm-2 control-label">นามสกุล</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputLastName" name="lastname"
+                                        [(ngModel)]="lastname" required>
+                                </div>
+                            </div>
+                            <div class="form-group row required">
+                                <label for="inputEmail" class="col-sm-2 control-label">อีเมล</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail" name="email"
+                                        [(ngModel)]="email" required name=un>
+                                </div>
+                            </div>
+                            <div class="form-group row required">
+                                <label for="" class="col-sm-2 control-label">หน้าที่</label>
+                                <div class="col-sm-10">
+                                    <select class="custom-select" status="status" name="status" [(ngModel)]="status"
+                                        required>
+                                        <option value="">เลือกหน้าที่</option>
+                                        <option value="1">ผู้ใช้งาน</option>
+                                        <option value="3">แอดมิน</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row required">
+                                <label for="inputPassword1" class="col-sm-2 control-label">รหัสผ่าน</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPassword1" name="password"
+                                        [(ngModel)]="password" required name=up>
+                                </div>
+                            </div>
+                            <div class="form-group row required">
+                                <label for="inputPassword2" class="col-sm-2 control-label">ยืนยันรหัสผ่าน</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPassword2" required name=up2>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group row required">
-                        <label for="inputLastName" class="col-sm-2 control-label">นามสกุล</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputLastName" required>
-                        </div>
+                    <div class="modal-footer">
+                        <button (click)="save()" class="btn btn-primary">บันทึก</button>
                     </div>
-                    <div class="form-group row required">
-                        <label for="inputEmail" class="col-sm-2 control-label">อีเมล</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail" required name=un>
-                        </div>
-                    </div>
-                    <div class="form-group row required">
-                        <label for="" class="col-sm-2 control-label">หน้าที่</label>
-                        <div class="col-sm-10">
-                            <select class="custom-select" required>
-                                <option value="">เลือกหน้าที่</option>
-                                <option value="1">ผู้ใช้งาน</option>
-                                <option value="3">แอดมิน</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row required">
-                        <label for="inputPassword1" class="col-sm-2 control-label">รหัสผ่าน</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword1" required name=up>
-                        </div>
-                    </div>
-                    <div class="form-group row required">
-                        <label for="inputPassword2" class="col-sm-2 control-label">ยืนยันรหัสผ่าน</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword2" required name=up2>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">บันทึก</button>
+                </div>
             </div>
         </div>
     </div>

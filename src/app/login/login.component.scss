@@ -12,22 +12,9 @@
 .login-form h2 {
     margin: 0 0 15px;
 }
-.form-control, .btn {
-    min-height: 38px;
-    border-radius: 2px;
-}
+
 .btn {        
     font-size: 15px;
     font-weight: bold;
-}
-html {
-    overflow:   scroll;
-  }
-  ::-webkit-scrollbar {
-      width: 0px;
-      background: transparent; /* make scrollbar transparent */
-  }
-  .bodybg-color {
-    background-color: rgb(82, 11, 214);
 }
 

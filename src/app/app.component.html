@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">  
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" *ngIf="authenticationService.isAuthenticated">  
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" data-toggle="dropdown">
@@ -36,22 +36,20 @@
         </div>
       </li>
     </ul>
-
-    <app-left-menu></app-left-menu>
-
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2020</strong>
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1.0.0
-      </div>
-    </footer>
-
   </nav>
 
-  <div class="content-wrapper">
-    <div style="padding: 20px">
-      <router-outlet></router-outlet>
-    </div>
+  <div  *ngIf="authenticationService.isAuthenticated">
+    <app-left-menu></app-left-menu>
+
   </div>
 
-</div>
+  <footer class="main-footer" *ngIf="authenticationService.isAuthenticated">
+    <strong>Copyright &copy; 2020</strong>
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0
+    </div>
+  </footer>
+
+      <router-outlet></router-outlet>
+  
+
