@@ -6,9 +6,8 @@
     <span class="brand-text font-weight-light">Waste Management</span>
   </a>
 
-  <!-- Sidebar -->
   <div class="sidebar">
-    <!-- Sidebar Menu -->
+
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
@@ -60,44 +59,35 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
-                <p class="h5">
-                  เกี่ยวกับข้อมูลขยะ
-                  <i class="right fas fa-angle-left"></i>
-                </p>
+            <li class="nav-item">
+              <a (click)="addtypetrash()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <p>จัดการประเภทของขยะ</p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a (click)="addtypetrash()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
-                    <p>จัดการประเภทของขยะ</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a (click)="addroutecollectiontrash()" class="nav-link" data-toggle="pill"
-                    style="cursor: hand;cursor: pointer;">
-                    <p>จัดการเส้นทางการเก็บขน</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a (click)="adddriver()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
-                    <p>จัดการพนักงานขับรถ</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a (click)="addcollectortrash()" class="nav-link" data-toggle="pill"
-                    style="cursor: hand;cursor: pointer;">
-                    <p>จัดการพนักงานเก็บขน</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a (click)="addtruck()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
-                    <p>จัดการรถขยะ</p>
-                  </a>
-                </li>
-              </ul>
+            </li>
+            <li class="nav-item">
+              <a (click)="addroutecollectiontrash()" class="nav-link" data-toggle="pill"
+                style="cursor: hand;cursor: pointer;">
+                <p>จัดการเส้นทางการเก็บขน</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="adddriver()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <p>จัดการพนักงานขับรถ</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="addcollectortrash()" class="nav-link" data-toggle="pill"
+                style="cursor: hand;cursor: pointer;">
+                <p>จัดการพนักงานเก็บขน</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="addtruck()" class="nav-link" data-toggle="pill" style="cursor: hand;cursor: pointer;">
+                <p>จัดการรถขยะ</p>
+              </a>
             </li>
           </ul>
+
         </li>
 
         <li class="nav-item">
@@ -110,5 +100,4 @@
       </ul>
     </nav>
   </div>
-  <!-- /.sidebar -->
 </aside>

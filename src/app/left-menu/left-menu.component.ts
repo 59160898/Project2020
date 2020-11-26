@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
+
+declare var $: any;
 
 @Component({
   selector: 'app-left-menu',
@@ -11,54 +13,54 @@ export class LeftMenuComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    $('[data-widget="treeview"]').Treeview('init');
   }
 
-  dashboard(){
+  dashboard() {
     this.router.navigate(['dashboard']);
   }
 
-  trashmanage(){
+  trashmanage() {
     this.router.navigate(['trashmanage']);
   }
 
-  device(){
+  device() {
     this.router.navigate(['device']);
   }
 
-  trashreport(){
+  trashreport() {
     this.router.navigate(['trashreport']);
   }
 
-  deviceReport(){
+  deviceReport() {
     this.router.navigate(['deviceReport']);
   }
 
-  setting(){
+  setting() {
     this.router.navigate(['setting']);
   }
 
-  addtypetrash(){
+  addtypetrash() {
     this.router.navigate(['addtypetrash']);
   }
 
-  addroutecollectiontrash(){
+  addroutecollectiontrash() {
     this.router.navigate(['addroutecollectiontrash']);
   }
 
-  adddriver(){
+  adddriver() {
     this.router.navigate(['adddriver']);
   }
 
-  addcollectortrash(){
+  addcollectortrash() {
     this.router.navigate(['addcollectortrash']);
   }
 
-  addtruck(){
+  addtruck() {
     this.router.navigate(['addtruck']);
   }
 
-
-  manageUsers(){
+  manageUsers() {
     this.router.navigate(['manageUsers']);
   }
 

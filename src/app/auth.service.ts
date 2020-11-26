@@ -10,7 +10,7 @@ export class AuthService {
   private readonly mockUser: SignInData = new SignInData('admin', '123');
   isAuthenticated = false;
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   authenticate(signInData: SignInData): boolean {
     if (this.checkCredentials(signInData)) {

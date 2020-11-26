@@ -1,76 +1,81 @@
-<!-- Main content -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="info-box" style="font-size:18px">
-        <span class="info-box-icon bg-danger"><i class="fas fa-trash"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">ขยะเต็มถัง</span>
-          <span class="info-box-number">3 ถัง</span>
+<div class="content-wrapper">
+  <div style="padding: 20px">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info-box" style="font-size:18px">
+            <span class="info-box-icon bg-danger"><i class="fas fa-trash"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">ขยะเต็มถัง</span>
+              <span class="info-box-number">3 ถัง</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box" style="font-size:18px">
+            <span class="info-box-icon bg-warning"><i class="fas fa-trash"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">ขยะมีครึ่งถัง</span>
+              <span class="info-box-number">3 ถัง</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box" style="font-size:18px">
+            <span class="info-box-icon bg-success"><i class="fas fa-trash"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">ขยะมีน้อย</span>
+              <span class="info-box-number">3 ถัง</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="info-box" style="font-size:18px">
-        <span class="info-box-icon bg-warning"><i class="fas fa-trash"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">ขยะมีครึ่งถัง</span>
-          <span class="info-box-number">3 ถัง</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="info-box" style="font-size:18px">
-        <span class="info-box-icon bg-success"><i class="fas fa-trash"></i></span>
-        <div class="info-box-content">
-          <span class="info-box-text">ขยะมีน้อย</span>
-          <span class="info-box-number">3 ถัง</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <!-- Dashboard 1 -->
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Dashboard 1 -->
+          <div class="card card-dark">
+            <div class="card-header">
+              <p class="h4 font-weight-bold">ปริมาณของขยะประเภทต่าง ๆ</p>
+            </div>
+            <div class="card-body">
+
+
+
+              <canvas id="donutChart" width="650px" height="500px"></canvas>
+
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col (LEFT) -->
+
+        <!-- Dashboard 2 -->
+        <div class="col-md-6">
+          <div class="card card-dark">
+            <div class="card-header">
+              <p class="h4 d-inline-block font-weight-bold">ปริมาณขยะของถนนแต่ละสาย</p>
+            </div>
+            <div class="card-body">
+              <canvas id="pieChart" width="650px" height="500px"></canvas>
+            </div>
+
+          </div>
+          <!-- /.col (RIGHT) -->
+        </div>
+        <!-- /.row -->
+      </div>
+
       <div class="card card-dark">
         <div class="card-header">
-          <p class="h4 font-weight-bold">ปริมาณของขยะประเภทต่าง ๆ</p>
+          <p class="h4 d-inline-block font-weight-bold">ปริมาณขยะ</p>
         </div>
         <div class="card-body">
-
-    
-
-          <canvas id="donutChart" width="650px" height="500px"></canvas>
-
+          <canvas id="myChart" width="1600px" height="500px"></canvas>
         </div>
       </div>
-      <!-- /.card -->
-    </div>
-    <!-- /.col (LEFT) -->
-
-    <!-- Dashboard 2 -->
-    <div class="col-md-6">
-      <div class="card card-dark">
-        <div class="card-header">
-          <p class="h4 d-inline-block font-weight-bold">ปริมาณขยะของถนนแต่ละสาย</p>
-        </div>
-        <div class="card-body">
-          <canvas id="pieChart" width="650px" height="500px"></canvas>
-        </div>
-
-      </div>
-      <!-- /.col (RIGHT) -->
-    </div>
-    <!-- /.row -->
-  </div>
-
-  <div class="card card-dark">
-    <div class="card-header">
-      <p class="h4 d-inline-block font-weight-bold">แดชบอร์ด 3</p>
-    </div>
-    <div class="card-body">
-      <canvas id="myChart" width="1600px" height="500px"></canvas>
     </div>
   </div>
+
 </div>
+<!-- Main content -->
